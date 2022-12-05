@@ -8,8 +8,7 @@ const { Op } = require("sequelize")
 
 router.post('/firmware/addFirmware', upload.single('filepath'),async (req,res,next)=>{
     try{
-        console.log(req.file)
-        req.body = pick(req.body, ['version','releaseNote','filePath'])
+        req.body = pick(req.body, ['version','releaseNote','filePath', 'states'])
         removeNull(req.body)
         const {version} = req.body
         req.body.filePath = req.file.path
