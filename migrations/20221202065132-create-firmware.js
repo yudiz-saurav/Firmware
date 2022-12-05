@@ -22,7 +22,7 @@ module.exports = {
         defaultValue:false
       },
       releaseNote: {
-        type: Sequelize.STRING
+        type: Sequelize.TEXT
       },
       filePath: {
         type: Sequelize.STRING

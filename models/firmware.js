@@ -22,7 +22,7 @@ module.exports = (sequelize, DataTypes) => {
       type:DataTypes.BOOLEAN,
       defaultValue:false
     },
-    releaseNote: DataTypes.STRING,
+    releaseNote: DataTypes.TEXT,
     filePath: DataTypes.STRING
   }, {
     sequelize,
