@@ -13,7 +13,7 @@ const storage = multer.diskStorage({
   },
   filename: (req, file, cb) => {
     const ext = file.mimetype.split('/')[1]
-    cb(null, `file-${file.fieldname}-${Date.now()}.${ext}`)
+    cb(null, file.originalname)
   }
 })
 //multer filter
